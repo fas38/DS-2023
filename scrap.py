@@ -35,7 +35,7 @@ if __name__ == "__main__":
     process = CrawlerProcess(
         settings={
             "FEEDS": {
-                "stocks.json": {"format": "json"},
+                "stocks.csv": {"format": "csv"},
             },
         }
     )
