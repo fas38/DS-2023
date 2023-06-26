@@ -1,0 +1,66 @@
+symbol,company_name,market_cap,percent_change,volume,revenue
+GOOGL,Alphabet Inc.,"1,590.68B",-0.66%,"18,862,751",284.61B
+META,"Meta Platforms, Inc.",739.94B,1.35%,"23,697,220",117.35B
+BIDU,"Baidu, Inc.",48.70B,-1.85%,"1,261,123",18.40B
+SPOT,Spotify Technology S.A.,30.46B,-1.01%,"1,259,850",13.16B
+DASH,"DoorDash, Inc.",28.26B,-0.18%,"5,814,720",7.16B
+SNAP,Snap Inc.,17.33B,1.69%,"26,914,726",4.53B
+PINS,"Pinterest, Inc.",17.30B,0.38%,"20,095,661",2.83B
+TME,Tencent Music Entertainment Group,13.27B,-2.74%,"3,110,902",4.18B
+MTCH,"Match Group, Inc.",11.88B,0.44%,"5,330,729",3.18B
+TWLO,Twilio Inc.,11.78B,-2.21%,"3,357,439",3.96B
+Z,"Zillow Group, Inc.",11.19B,-1.52%,"1,276,436",2.40B
+IAC,IAC Inc.,5.23B,-0.21%,"379,097",4.99B
+ATHM,Autohome Inc.,3.55B,-1.37%,"265,637",-
+WB,Weibo Corporation,3.30B,6.45%,"1,023,820",1.77B
+YELP,Yelp Inc.,2.47B,-0.03%,"804,914",1.23B
+CARG,"CarGurus, Inc.",2.34B,-2.87%,"1,143,773",1.46B
+YY,JOYY Inc.,2.02B,-1.42%,"781,583",328.00M
+GETY,"Getty Images Holdings, Inc.",1.93B,-4.88%,"655,963",930.91M
+MOMO,Hello Group Inc.,1.75B,-1.69%,"687,215",12.37B
+SSTK,"Shutterstock, Inc.",1.70B,-3.17%,"1,233,757",843.97M
+ANGI,Angi Inc.,1.65B,-2.09%,"215,930",1.85B
+OPRA,Opera Limited,1.55B,-1.32%,"854,082",346.50M
+PERI,Perion Network Ltd.,1.54B,0.25%,"354,801",660.09M
+SEAT,Vivid Seats Inc.,1.47B,1.22%,"702,442",630.57M
+GENI,Genius Sports Limited,1.22B,-1.18%,"1,669,150",352.34M
+KIND,"Nextdoor Holdings, Inc.",1.13B,1.34%,"18,132,487",211.54M
+FVRR,Fiverr International Ltd.,983.21M,-2.47%,"853,682",338.64M
+TBLA,Taboola.com Ltd.,950.47M,-2.15%,"1,309,210",1.37B
+TTGT,"TechTarget, Inc.",950.39M,-0.13%,"853,369",286.44M
+MATH,Metalpha Technology Holding Limited,901.37M,,"34,401",5.30M
+THRY,"Thryv Holdings, Inc.",846.91M,-2.68%,"1,158,507",1.14B
+ZH,Zhihu Inc.,732.00M,-4.59%,"2,098,724",561.27M
+MAX,"MediaAlpha, Inc.",559.86M,-1.90%,"763,793",428.10M
+SMWB,Similarweb Ltd.,488.88M,3.60%,"143,517",201.70M
+TRVG,trivago N.V.,417.92M,1.67%,"276,634",591.74M
+NN,NextNav Inc.,325.31M,4.86%,"601,653",3.56M
+DOYU,DouYu International Holdings Limited,322.97M,-0.98%,"791,391",989.18M
+JFIN,Jiayin Group Inc.,314.18M,7.69%,"98,231",565.12M
+OB,Outbrain Inc.,253.20M,1.64%,"112,543",969.64M
+EVER,"EverQuote, Inc.",221.06M,-2.40%,"410,407",402.67M
+TRUE,"TrueCar, Inc.",191.77M,1.90%,"805,370",154.97M
+GRPN,"Groupon, Inc.",169.05M,0.73%,"1,326,881",567.38M
+LTRPA,"Liberty TripAdvisor Holdings, Inc.",168.84M,-1.94%,"147,821",1.60B
+STBX,Starbox Group Holdings Ltd.,165.30M,2.36%,"310,176",7.19M
+BODY,"The Beachbody Company, Inc.",131.80M,-11.98%,"9,946,818",638.18M
+SCOR,"comScore, Inc.",83.12M,3.37%,"34,990",374.02M
+AREN,"The Arena Group Holdings, Inc.",80.52M,4.27%,"1,257,564",224.07M
+BZFD,"BuzzFeed, Inc.",73.30M,-7.32%,"1,114,151",412.27M
+EGLX,Enthusiast Gaming Holdings Inc.,69.05M,-3.19%,"57,493",143.88M
+CMCM,Cheetah Mobile Inc.,66.73M,0.88%,"7,069",126.84M
+LIZI,Lizhi Inc.,53.26M,1.00%,"62,399",334.72M
+UPXI,"Upexi, Inc.",42.70M,3.06%,"27,380",78.06M
+IZEA,"IZEA Worldwide, Inc.",37.77M,,"100,490",40.94M
+FAZE,FaZe Holdings Inc.,35.30M,3.00%,"70,542",66.77M
+KRKR,36Kr Holdings Inc.,34.95M,-0.07%,"6,293",47.80M
+ASST,Asset Entities Inc.,33.88M,2.06%,"320,989",278.18K
+ZDGE,"Zedge, Inc.",30.03M,-9.17%,"146,076",27.98M
+FENG,Phoenix New Media Limited,24.85M,-0.55%,"12,852",110.14M
+LKCO,Luokung Technology Corp.,20.52M,-2.34%,"32,990",93.59M
+SLGG,"Super League Gaming, Inc.",14.93M,-11.43%,"306,255",19.23M
+TC,TuanChe Limited,12.29M,-0.47%,"27,931",26.28M
+LOV,Spark Networks SE,7.35M,-61.92%,"3,522,812",195.38M
+LCFY,Locafy Limited,7.05M,-8.56%,"149,853",-
+ONFO,"Onfolio Holdings, Inc.",6.29M,-1.91%,"30,817",3.19M
+GROM,"Grom Social Enterprises, Inc.",3.31M,6.85%,"347,331",5.40M
