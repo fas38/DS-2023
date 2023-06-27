@@ -5,8 +5,10 @@ import pickle
 from StockPriceDataset import StockPriceDataset
 from lstm import LSTMModel
 from torch import nn
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # request json format
 # {
@@ -98,10 +100,10 @@ def predict():
     # predicted_values = [item for sublist in predicted_values for item in sublist]
     # actual_values = [item for sublist in actual_values for item in sublist]
 
-    return jsonify({
+    print(jsonify({
         'predicted_values': predicted_values, 
         'actual_values': actual_values
-        })
+        }))
 
 if __name__ == '__main__':
     app.run(port=8080)
