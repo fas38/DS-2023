@@ -99,11 +99,11 @@ def predict():
     predicted_values = predicted_values[0]
     # predicted_values = [item for sublist in predicted_values for item in sublist]
     # actual_values = [item for sublist in actual_values for item in sublist]
-
-    print(jsonify({
-        'predicted_values': predicted_values, 
+    
+    return jsonify({
+        'predicted_values': predicted_values,
         'actual_values': actual_values
-        }))
+        })
 
 if __name__ == '__main__':
     app.run(port=8080)
