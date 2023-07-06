@@ -4,7 +4,7 @@ import axios from 'axios';
 function SearchBar(props) {
   const [company, setCompany] = useState('');
   const [predictType, setPredictType] = useState('');
-  const [predictPeriod, setPredictPeriod] = useState('');
+  const [predictPeriod, setPredictPeriod] = useState(0);
 
   const handleSearch = async () => {
     try {
