@@ -12,7 +12,9 @@ function Results(props) {
   let normalizedPredicted;
   let values = [];
 
-
+ // This block of code is used to normalize the predicted values, check of nulls
+ // Also the circular progress bar is showing the averaged values
+ // the values list has all the values for the line chart
   if(!predicted) {
     normalizedPredicted = 0;
   } else {
