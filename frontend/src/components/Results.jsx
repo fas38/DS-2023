@@ -19,7 +19,7 @@ function Results(props) {
     normalizedPredicted = 0;
   } else {
     let sum = predicted.reduce((acc, curr) => acc + curr, 0);
-    normalizedPredicted = ((sum/predicted.length + 1) / 2) * 100;
+    normalizedPredicted = (sum/predicted.length) * 100;
     values = Object.entries(predicted)
   }
 

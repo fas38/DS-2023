@@ -6,6 +6,7 @@ from StockPriceDataset import StockPriceDataset
 from lstm import LSTMModel
 from torch import nn
 from flask_cors import CORS
+import pandas as pd
 
 app = Flask(__name__)
 CORS(app)
@@ -17,13 +18,27 @@ CORS(app)
 #     "predict_period": 1, # 1, 2, 3, number of days, weeks, months
 # }
 
+# read company list
+companies = pd.read_csv('dataset/selected_companies.csv')
+
+
 @app.route('/predict', methods=['POST'])
 def predict():
     # Get the data from POST request
     data = request.json
-    company = data['company']
     predict_type = data['predict_type']
     predict_period = data['predict_period']
+    
+    company = data['company']
+    index = companies['company_name'].str.lower().str.contains(company.lower())
+    company = companies[index]
+    if company.empty:
+        return jsonify({'error': 'Invalid company name'})
+    else:
+        company = company['index'].iloc[0]
+
+
+    
 
     # set device
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -37,20 +52,36 @@ def predict():
     if predict_type.lower() == 'day':
         num_days = str(predict_period)
     elif predict_type.lower() == 'week':
-        num_days = predict_period * 7
+        num_days = int(predict_period) * 7
         num_days = str(num_days)
     elif predict_type.lower() == 'month':
-        num_days = predict_period * 30
+        num_days = int(predict_period) * 30
         num_days = str(num_days)
     else:
         return jsonify({'error': 'Invalid predict_type'})
 
     # Hyperparameters
-    input_dim = 2 # number of features
-    hidden_dim = 100 # number of hidden units
-    num_layers = 3 # number of LSTM / GRU layers
+    input_dim = 4 # number of features
+    hidden_dim = 20 # number of hidden units
+    num_layers = 2 # number of LSTM layers
+    requested_predict_period = int(num_days)
     output_dim = int(num_days) # predict next specified days of stock price
-    batch_size = 1
+    batch_size = 32
+
+    if requested_predict_period <= 30:
+        num_days = '30'
+        output_dim = 30
+    elif requested_predict_period <= 90:
+        num_days = '90'
+        output_dim = 90
+    elif requested_predict_period <= 180:
+        num_days = '180'
+        output_dim = 180
+    elif requested_predict_period <= 365:
+        num_days = '360'
+        output_dim = 360
+    else:
+        return jsonify({'error': 'predict period too long'})
 
     # load test dataset
     test_dataset_name = 'test_dataset-'
@@ -61,7 +92,7 @@ def predict():
 
     # initialize model, loss function, and optimizer
     model = LSTMModel(input_dim, hidden_dim, num_layers, output_dim).to(device)
-    criterion = nn.MSELoss()
+    criterion = nn.HuberLoss()
 
     # load model weights
     model_name = 'lstm-'
@@ -97,6 +128,8 @@ def predict():
 
     actual_values = actual_values[0]
     predicted_values = predicted_values[0]
+    actual_values = actual_values[:requested_predict_period]
+    predicted_values = predicted_values[:requested_predict_period]
     # predicted_values = [item for sublist in predicted_values for item in sublist]
     # actual_values = [item for sublist in actual_values for item in sublist]
     
