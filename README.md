@@ -1,2 +1,2 @@
-## Long Term Stock Prediction using LLM
+## Long Term Stock Prediction using LLM and LSTM
 
