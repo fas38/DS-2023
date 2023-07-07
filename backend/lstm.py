@@ -18,11 +18,6 @@ class LSTMModel(nn.Module):
             self.lstm = nn.LSTM(2, hidden_dim, num_layers, batch_first=True, dropout=dropout, bidirectional=False)
         self.fc = nn.Linear(hidden_dim, output_dim)
 
-        # if num_layers == 1:
-        #     self.lstm = nn.LSTM(input_dim, hidden_dim, num_layers, batch_first=True, bidirectional=False)
-        # else:
-        #     self.lstm = nn.LSTM(input_dim, hidden_dim, num_layers, batch_first=True, dropout=dropout, bidirectional=False)
-        # self.fc = nn.Linear(hidden_dim, output_dim)
 
     def forward(self, x):
         x = x.permute(0, 2, 1)
